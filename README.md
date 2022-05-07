@@ -3,6 +3,10 @@
 The image pixel data was extracted from the `img` created in DOM as a class and then forwared to `canvas` class to create the 2D context for further use. The RGBA values were then converted to a single grayscale value between 0 and 1. Even better and more stable results yielded the black and white transformation of values to 0 or 1 only.
 Next 1D array was fed as input to a simple feedforward neural network (FNN) and the output was set as either `[0]` for a cat or `[1]` for a dog.
 
+## GitHub Pages
+
+The solution with pretrained model is hosted at: https://nelias.github.io/brain.js-examples/cat-dog-classifier/index.html
+
 ## Training the neural network locally
 
 To train the neural network and access the files locally without the CORS Error you can use the Live Server extension in the Visual Studio Code or your own simple server programmed in NodeJS.
@@ -31,4 +35,3 @@ It would be the best to use the `Convolutional Neural Network` for this type of 
 A simple `LSTM` neural network does not take the Matrix values in JS (2D array of numbers) so instead the `LSTMTimeStep` could be used but still it does not output the expected value. Currently `LSTM` outputs another Matrix and it is uselss in the classification process.
 
 I think that with 200 images in each folder the results would be much much better and the precision of classification would increase, especially with more images in different angles, colors, shapes, etc. The black and white images could instead be changed to images of only three colors (not grayscale that could be 0.66 or 0.82 or 0.99 or 0.22) so not to lose the important details that differentiate two different objects. In black and white images mostly the shapes are retained, which is not sufficient enough.
-
